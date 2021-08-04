@@ -1,0 +1,40 @@
+!-- Modify it at your will. -->
+<group name="syslog,">
+
+ <rule id="100012" level="3">
+  <decoded_as>filezilasftp</decoded_as>
+  <description>filezilasftp logs received</description>
+  <group>login_day,</group>
+ </rule>
+ <rule id="100013" level="11">
+  <if_sid>100012</if_sid>
+  <match>Disconnected</match>
+  <description>filezila sftp Disconnected.</description>
+</rule>
+ <rule id="100014" level="11">
+  <if_sid>100012</if_sid>
+  <match>Connected</match>
+  <description>filezila sftp Login Success.</description>
+</rule>
+<rule id="100015" level="11">
+  <if_sid>100012</if_sid>
+  <match>put</match>
+  <description>filezila sftp File uploaded successful.</description>
+</rule>
+<rule id="100016" level="11">
+  <if_sid>100012</if_sid>
+  <match>get</match>
+  <description>filezila sftp File downloaded successful.</description>
+</rule>
+<rule id="100017" level="11">
+  <if_sid>100012</if_sid>
+  <match>rm</match>
+  <description>filezila sftp File deleted successful.</description>
+</rule>
+<rule id="100018" level="11">
+  <if_sid>100012</if_sid>
+  <match>mv</match>
+  <description>filezila sftp File renamed successful.</description>
+</rule>
+
+</group>
