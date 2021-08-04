@@ -1,0 +1,8 @@
+<decoder name="filezilasftp">
+  <parent>windows-date-format</parent>
+  <use_own_name>true</use_own_name>
+  <type>syslog</type>
+  <prematch>Status|Command|Response|Error</prematch>
+  <regex offset="after_parent">^(\d+) (\d+) (\.+)</regex>
+  <order>id,code,status</order>
+</decoder>
