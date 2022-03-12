@@ -1,5 +1,5 @@
 !-- Modify it at your will. -->
-<group name="syslog,">
+<group name="syslog,sftp">
 
  <rule id="100012" level="3">
   <decoded_as>filezilasftp</decoded_as>
